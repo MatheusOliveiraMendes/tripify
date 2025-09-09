@@ -1,11 +1,11 @@
 import React from 'react';
-import Hero from '@/components/Hero';
-import Services from '@/components/Services';
-import Destinations from '@/components/Destinations';
-import BookingSteps from '@/components/BookingSteps';
-import Testimonials from '@/components/Testimonials';
-import Newsletter from '@/components/Newsletter';
-import Footer from '@/components/Footer';
+import Hero from '../components/Hero';
+import Services from '../components/Services';
+import Destinations from '../components/Destinations';
+import BookingSteps from '../components/BookingSteps';
+import Testimonials from '../components/Testimonials';
+import Newsletter from '../components/Newsletter';
+import Footer from '../components/Footer';
 
 const Index: React.FC = () => {
   return (
