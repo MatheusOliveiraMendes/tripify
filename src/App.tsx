@@ -1,9 +1,16 @@
-function App() {
-  return (
-    <div className="flex items-center justify-center h-screen bg-gradient-to-r from-blue-500 to-indigo-600 text-white ">
-      <h1 className="text-5xl font-bold drop-shadow-lg">✈️ Welcome to Tripify</h1>
-    </div>
-  );
-}
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Index from "./pages/Index";
+import NotFound from "./pages/NotFound";
+
+
+const App = () => (
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Index />} />
+          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </BrowserRouter>
+);
 
 export default App;
