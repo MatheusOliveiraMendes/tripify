@@ -20,7 +20,7 @@ const Footer: React.FC = () => {
     <footer className="w-full max-w-[1025px] mt-[166px] max-md:max-w-full max-md:mt-10">
       <div className="flex w-full gap-5 font-normal flex-wrap justify-between">
         <div className="flex flex-col items-stretch">
-          <h2 className="text-[#181E4B] text-[44px] font-bold">Jadoo.</h2>
+          <h2 className="text-[#181E4B] text-[44px] font-bold">Tripify</h2>
           <p className="text-[#5E6282] text-[13px] leading-4 mt-[19px]">
             Book your trip in minute, get full
             <br />
@@ -34,7 +34,7 @@ const Footer: React.FC = () => {
               {section.title}
             </h3>
             <ul className="space-y-3 mt-[34px]">
-              {section.links.map((link, index) => (
+              {section.links.map((link,) => (
                 <li key={link}>
                   <a 
                     href="#" 
