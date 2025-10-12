@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Services: React.FC = () => {
-  const iconMap: Record<string, JSX.Element> = {
+  const iconMap: Record<string, React.ReactNode> = {
     weather: (
       <svg
         width="28"
