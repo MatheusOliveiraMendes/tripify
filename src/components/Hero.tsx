@@ -2,47 +2,38 @@ import React from 'react';
 
 const Hero: React.FC = () => {
   return (
-    <header className="w-full max-w-[1182px] ml-[19px] mt-[18px] max-md:max-w-full">
-      <div className="gap-5 flex max-md:flex-col max-md:items-stretch">
-        <div className="w-[42%] max-md:w-full max-md:ml-0">
-          <div className="flex mr-[-130px] w-full flex-col self-stretch my-auto max-md:max-w-full max-md:mt-10">
-            <div className="text-[rgba(223,105,81,1)] text-xl font-bold uppercase">
-              Best Destinations around the world
-            </div>
-            <h1 className="text-[#181E4B] text-[84px] font-bold leading-[89px] tracking-[-3.36px] self-stretch mt-6 max-md:max-w-full max-md:text-[40px] max-md:leading-[47px]">
-              Travel, enjoy
-              <br />
-              and live a new
-              <br />
-              and full life
-            </h1>
-            <p className="text-[rgba(94,98,130,1)] text-base font-normal leading-[30px] mt-[30px] max-md:max-w-full">
-              Built Wicket longer admire do barton vanity itself do in it.
-              Preferred to sportsmen it engrossed listening. Park gate sell
-              they west hard for the.
-            </p>
-            <div className="flex items-stretch gap-[40px_44px] mt-[34px]">
-              <button className="aspect-[2.83] object-contain w-[170px] shrink-0 max-w-full rounded-[10px] bg-[#F1A501] text-white font-semibold hover:bg-[#e09501] transition-colors">
-                Find out more
-              </button>
-              <div className="flex w-[165px] shrink-0 h-[52px] my-auto items-center justify-center">
-                <button className="flex items-center gap-2 text-[#686D7D] hover:text-[#181E4B] transition-colors">
-                  <div className="w-[52px] h-[52px] bg-[#DF6951] rounded-full flex items-center justify-center">
-                    <svg width="12" height="14" viewBox="0 0 12 14" fill="none">
-                      <path d="M0 0V14L12 7L0 0Z" fill="white"/>
-                    </svg>
-                  </div>
-                  <span className="font-medium">Play Demo</span>
-                </button>
-              </div>
-            </div>
+    <header className="w-full">
+      <div className="grid gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.05fr)] lg:items-center">
+        <div className="space-y-8">
+          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[#DF6951]">
+            Best destinations around the world
+          </p>
+          <h1 className="text-4xl font-bold leading-tight text-[#181E4B] sm:text-5xl lg:text-[64px] lg:leading-[68px]">
+            Travel, enjoy and live a new and full life
+          </h1>
+          <p className="max-w-xl text-base leading-relaxed text-[#5E6282]">
+            Built Wicket longer admire do barton vanity itself do in it. Preferred to sportsmen it
+            engrossed listening. Park gate sell they west hard for the.
+          </p>
+          <div className="flex flex-wrap items-center gap-6">
+            <button className="rounded-2xl bg-gradient-to-r from-[#FF946D] to-[#FF7D68] px-8 py-3 text-sm font-semibold uppercase tracking-wide text-white shadow-lg shadow-[#FF7D68]/30 transition-transform hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(255,125,104,0.35)]">
+              Find out more
+            </button>
+            <button className="flex items-center gap-4 rounded-2xl border border-transparent px-4 py-2 text-sm font-medium text-[#686D7D] transition-all hover:border-[#DF6951]/30 hover:text-[#181E4B]">
+              <span className="flex h-12 w-12 items-center justify-center rounded-full bg-[#DF6951] text-white shadow-lg shadow-[#DF6951]/40">
+                <svg width="12" height="14" viewBox="0 0 12 14" fill="none">
+                  <path d="M0 0V14L12 7L0 0Z" fill="white" />
+                </svg>
+              </span>
+              Play Demo
+            </button>
           </div>
         </div>
-        <div className="w-[58%] ml-5 max-md:w-full max-md:ml-0">
+        <div className="flex items-center justify-center lg:justify-end">
           <img
             src="https://api.builder.io/api/v1/image/assets/7014096b18dd4e9abcb3939bccbecaad/806108179b28a5075c81abad38bcdffe1f620275?placeholderIfAbsent=true"
-            alt="Travel destination"
-            className="aspect-[1] object-contain w-full grow max-md:max-w-full"
+            alt="Traveler flying on suitcase illustration"
+            className="w-full max-w-lg rounded-[48px] object-contain"
           />
         </div>
       </div>

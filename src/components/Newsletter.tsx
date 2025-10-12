@@ -14,44 +14,60 @@ const Newsletter: React.FC = () => {
   };
 
   return (
-    <section className="flex flex-col relative min-h-[407px] w-[1257px] max-w-full justify-center mt-[124px] px-20 py-[79px] rounded-[0px_0px_0px_0px] max-md:mt-10 max-md:px-5">
-      <img
-        src="https://api.builder.io/api/v1/image/assets/7014096b18dd4e9abcb3939bccbecaad/ac0068038693853edc8d114ddd5e91aad219f2ba?placeholderIfAbsent=true"
-        alt="Newsletter background"
-        className="absolute h-full w-full object-cover inset-0 rounded-[20px]"
-      />
-      <div className="relative flex w-[881px] max-w-full flex-col items-stretch">
-        <h2 className="text-[#5E6282] text-center text-[33px] font-semibold leading-[54px] max-md:max-w-full">
-          Subscribe to get information, latest news and other
-          <br />
-          interesting offers about Jadoo
+    <section className="relative w-full overflow-hidden rounded-[40px] bg-gradient-to-br from-[#f4f6ff] via-white to-[#fff4ed] p-10 text-[#14183E] shadow-[0_30px_80px_rgba(24,30,75,0.08)] sm:p-16">
+      <span className="pointer-events-none absolute -right-8 top-6 h-32 w-32 rounded-[36px] bg-[#FF946D]/20 blur-3xl" />
+      <span className="pointer-events-none absolute -left-10 bottom-10 h-32 w-32 rounded-[36px] bg-[#4475F2]/10 blur-3xl" />
+
+      <div className="mx-auto flex max-w-3xl flex-col items-center gap-10 text-center">
+        <h2 className="text-2xl font-semibold leading-snug text-[#5E6282] sm:text-3xl">
+          Subscribe to get information, latest news and other interesting offers about Jadoo
         </h2>
-        
+
         {isSubscribed ? (
-          <div className="self-center mt-[74px] max-md:mt-10">
-            <div className="bg-green-100 border border-green-400 text-green-700 px-6 py-4 rounded-[10px] text-center">
-              Thank you for subscribing! 🎉
-            </div>
+          <div className="rounded-2xl border border-green-200 bg-green-50 px-6 py-4 text-sm font-medium text-green-600">
+            Thank you for subscribing! 🎉
           </div>
         ) : (
-          <form 
+          <form
             onSubmit={handleSubmit}
-            className="self-center flex w-[625px] max-w-full items-stretch gap-6 flex-wrap mt-[74px] max-md:mt-10"
+            className="flex w-full flex-col gap-4 sm:flex-row sm:items-center"
           >
-            <div className="bg-white flex flex-col text-sm text-[#39425D] font-normal justify-center grow shrink-0 basis-0 w-fit px-[66px] py-[26px] rounded-[10px] max-md:max-w-full max-md:px-5">
+            <label className="flex flex-1 items-center gap-3 rounded-2xl bg-white px-6 py-4 text-sm text-[#39425D] shadow-inner">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M3.333 4.167h13.334c.737 0 1.333.597 1.333 1.333v9c0 .736-.596 1.333-1.333 1.333H3.333c-.736 0-1.333-.597-1.333-1.333v-9c0-.736.597-1.333 1.333-1.333Z"
+                  stroke="#5E6282"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+                <path
+                  d="m17.333 5-7.333 5-7.333-5"
+                  stroke="#5E6282"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
               <input
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Your email"
                 required
-                className="outline-none bg-transparent w-full"
+                className="w-full border-none bg-transparent outline-none"
                 aria-label="Email address for newsletter subscription"
               />
-            </div>
+            </label>
             <button
               type="submit"
-              className="bg-[linear-gradient(180deg,#FF946D_0%,#FF7D68_100%)] flex flex-col items-stretch text-[17px] text-white font-semibold whitespace-nowrap text-center justify-center px-[50px] py-[23px] rounded-[10px] hover:opacity-90 transition-opacity max-md:px-5"
+              className="flex items-center justify-center rounded-2xl bg-gradient-to-r from-[#FF946D] to-[#FF7D68] px-8 py-4 text-sm font-semibold text-white shadow-lg shadow-[#FF7D68]/30 transition-transform hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(255,125,104,0.35)]"
             >
               Subscribe
             </button>
